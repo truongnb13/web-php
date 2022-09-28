@@ -3,13 +3,13 @@ if (empty($_POST['id'])) {
     header('location:index.php?error=Thiếu mã');
     exit;
 }
-$id = $_POST['id'];
+$id = addslashes($_POST['id']);
 // if (empty($_POST['photo_old'])) {
 //     header("location:form_update.php?id=$id&error=Thiếu ảnh");
 //     exit;
 // }
 
-$name = $_POST['name'];
+$name = addslashes($_POST['name']);
 $photo_new = $_FILES['photo_new'];
 // neu co anh moi 
 if ($photo_new['size'] > 0) {
@@ -19,12 +19,12 @@ if ($photo_new['size'] > 0) {
     $path_file = $folder . $file_name;  // kèm đường dẫn ảnh
     move_uploaded_file($photo_new["tmp_name"], $path_file); // truyen anh vao trong thu muc
 } else { // neu k doi anh moi
-    $file_name = $_POST['photo_old'];
+    $file_name = addslashes($_POST['photo_old']);
 }
 
-$price = $_POST['price'];
-$description = $_POST['description'];
-$manufacturer_id = $_POST['manufacturer_id'];
+$price = addslashes($_POST['price']);
+$description = addslashes($_POST['description']);
+$manufacturer_id = addslashes($_POST['manufacturer_id']);
 require '../connect.php';
 
 $query = "update products

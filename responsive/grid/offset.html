@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- My Library -->
+    <link rel="stylesheet" href="./grid.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .container {
+            background-color: antiquewhite;
+            min-height: 1080px;
+            text-align: center;
+        }
+        .course-item {
+            background-color: orange;
+            height: 300px;
+        }
+        h1{
+            margin: 0;
+            color: #fff;
+            line-height: 300px;
+        }
+        @media (max-width: 1023px ) {
+            .course-item {
+                margin-top: 8px;
+            }
+        }
+        
+
+    </style>
+</head>
+<!-- 
+    Column: col
+    Prefix class:
+        -- c -- mobile
+        -- m -- tablet
+        -- l -- pc    
+-->
+<body>
+    <div class="grid wide container">
+        <div class="row">
+            <div class="col l-3 m-3 l-o-3 m-o-3 c-12">
+                <div class="course-item">
+                    <h1>Course 1</h1>
+                </div>
+            </div>
+            <div class="col l-3 m-3 c-12">
+                <div class="course-item">
+                    <h1>Course 1</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

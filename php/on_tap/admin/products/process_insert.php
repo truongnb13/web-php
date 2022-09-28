@@ -1,10 +1,10 @@
 <?php
 
-$name = $_POST['name'];
+$name = addslashes($_POST['name']);
 $photo = $_FILES['photo'];
-$price = $_POST['price'];
-$description = $_POST['description'];
-$manufacturer_id = $_POST['manufacturer_id'];
+$price = addslashes($_POST['price']);
+$description = addslashes($_POST['description']);
+$manufacturer_id = addslashes($_POST['manufacturer_id']);
 
 $folder = "photos/";
 // lay dinh dang anh VD: .jpg .png

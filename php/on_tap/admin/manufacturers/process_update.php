@@ -3,16 +3,16 @@ if (empty($_POST['id'])){
     header('location:index.php?error=Thiếu mã');
     exit;
 }
-$id = $_POST['id'];
+$id = addslashes($_POST['id']);
 if (empty($_POST['photo'])) {
     header("location:form_update.php?id=$id&error=Thiếu ảnh");
     exit;
 }
 
-$name = $_POST['name'];
-$address = $_POST['address'];
-$phone = $_POST['phone'];
-$photo = $_POST['photo'];
+$name = addslashes($_POST['name']);
+$address = addslashes($_POST['address']);
+$phone = addslashes($_POST['phone']);
+$photo = addslashes($_POST['photo']);
 
 require '../connect.php';
 

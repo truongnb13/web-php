@@ -12,7 +12,7 @@
 <body>
     <div class="grid wide main">
         <?php include "header.php" ?>
-        <?php include "content.php" ?>
+        <?php include "product_content.php" ?>
         <?php include "footer.php" ?>
     </div>
 </body>
