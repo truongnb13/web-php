@@ -1,4 +1,5 @@
-<?php
+<?php 
+require '../ck_admin_signin.php';
 
 $id = $_GET['id'];
 

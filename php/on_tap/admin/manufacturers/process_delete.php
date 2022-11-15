@@ -1,4 +1,5 @@
-<?php
+<?php 
+require '../ck_super_admin.php';
 
 $id = $_GET['id'];
 

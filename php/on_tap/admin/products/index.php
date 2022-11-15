@@ -1,3 +1,4 @@
+<?php require '../ck_admin_signin.php'?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,9 @@
     <title>Danh sách sản phẩm</title>
 
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -51,6 +54,9 @@
     <div class="container">
         <div class="list">
             <div class="list-header">
+                <div class="list_back">
+                    <a href="../"><i class="fas fa-chevron-left"></i></i></a>
+                </div>
                 <a href="./">
                     <h1>Home Products</h1>
                 </a>
@@ -77,36 +83,36 @@
                         <th>Xóa</th>
                     </tr>
                     <?php foreach ($result as $each) : ?>
-                        <tr>
-                            <td><?php echo $each['id'] ?></td>
-                            <td>
-                                <a href="form_show.php?id=<?php echo $each['id'] ?>">
-                                    <?php echo $each['name'] ?>
-                                </a>
-                            </td>
-                            <td>
-                                <img height="100" src="photos/<?php echo $each['photo'] ?>" alt="">
-                            </td>
-                            <td><?php echo $each['price'] ?></td>
-                            <td><?php echo $each['manufacturer_name'] ?></td>
-                            <td>
-                                <a href="form_update.php?id=<?php echo $each['id'] ?>" class="update-each">
-                                    <i class="far fa-edit"></i> 
-                                </a>
-                            </td>
-                            <td>
-                                <a href="process_delete.php?id=<?php echo $each['id'] ?>" class="delete-each">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td><?php echo $each['id'] ?></td>
+                        <td>
+                            <a href="form_show.php?id=<?php echo $each['id'] ?>">
+                                <?php echo $each['name'] ?>
+                            </a>
+                        </td>
+                        <td>
+                            <img height="100" src="photos/<?php echo $each['photo'] ?>" alt="">
+                        </td>
+                        <td><?php echo $each['price'] ?></td>
+                        <td><?php echo $each['manufacturer_name'] ?></td>
+                        <td>
+                            <a href="form_update.php?id=<?php echo $each['id'] ?>" class="update-each">
+                                <i class="far fa-edit"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="process_delete.php?id=<?php echo $each['id'] ?>" class="delete-each">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
                     <?php endforeach ?>
                 </table>
                 <div class="page-number">
                     <?php for ($i = 1; $i <= $page_number; $i++) { ?>
-                        <a href="?page=<?php echo $i ?>&search=<?php echo $search ?>">
-                            <?php echo $i ?>
-                        </a>
+                    <a href="?page=<?php echo $i ?>&search=<?php echo $search ?>">
+                        <?php echo $i ?>
+                    </a>
                     <?php } ?>
                 </div>
             </div>

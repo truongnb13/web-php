@@ -111,7 +111,14 @@ a {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         padding-bottom: 40px;
-
+        .list_back {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            a{
+                color: rgb(8, 10, 8);
+            }
+        }
         .add_new {
             position: absolute;
             right: 5px;
@@ -157,6 +164,7 @@ a {
             .delete-each {
                 color: rgb(216, 82, 55);
             }
+            
         }
         
         .page-number {

@@ -1,4 +1,5 @@
-<?php
+<?php 
+require '../ck_super_admin.php';
 
 if (empty($_POST['photo'])){
     header("location:form_insert.php?error=Thiếu ảnh");

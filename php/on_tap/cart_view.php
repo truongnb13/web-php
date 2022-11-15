@@ -3,7 +3,13 @@ session_start();
 if (empty($_SESSION['id']) && empty($_SESSION['name'])) {
     header('location:index.php');
 }
-$cart = $_SESSION['cart'];
+// unset($_SESSION['cart']);
+if (isset($_SESSION['cart'])){
+    $cart = $_SESSION['cart'];
+} else {
+    $cart = null;
+}
+
 $sum = 0;
 ?>
 <!DOCTYPE html>
@@ -55,7 +61,7 @@ $sum = 0;
                         </div>
                     </div>
                 </div>
-
+                <?php if ($cart) {?>
                 <?php foreach ($cart as $id => $each) : ?>
                 <div class="row cart-content">
                     <div class="col l-6 m-4">
@@ -113,6 +119,7 @@ $sum = 0;
                     </div>
                 </div>
                 <?php endforeach ?>
+                <?php } ?>
                 <div class="row cart-total">
                     <div class="col l-12">
                         <div class="item">

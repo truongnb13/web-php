@@ -27,6 +27,11 @@ $sql = "insert into customers(name, email, password, phone_number, address)
 value ('$name', '$email', '$password', '$phone_number', '$address')";
 mysqli_query($connect, $sql);
 
+$title = 'Đăng ký thành công.';
+$content = "Bạn đã đăng ký thành công, vui lòng vô đây để theo dõi tôi =))).<br>
+<a href='fb.com/truongnb1302'>Nhấp vô đây </a> ";
+require 'mail.php';
+send_mail($email, $name, $title, $content);
 
 $sql = "select id from customers 
 where email = '$email'";

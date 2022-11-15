@@ -1,3 +1,4 @@
+<?php require '../ck_admin_signin.php'?>
 <!DOCTYPE html>
 <html lang="en">
 

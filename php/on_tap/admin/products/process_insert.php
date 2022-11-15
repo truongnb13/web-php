@@ -1,4 +1,5 @@
-<?php
+<?php 
+require '../ck_admin_signin.php';
 
 $name = addslashes($_POST['name']);
 $photo = $_FILES['photo'];

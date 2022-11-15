@@ -106,6 +106,14 @@ a {
   border-top-right-radius: 10px;
   padding-bottom: 40px;
 }
+.list .list-header .list_back {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.list .list-header .list_back a {
+  color: rgb(8, 10, 8);
+}
 .list .list-header .add_new {
   position: absolute;
   right: 5px;

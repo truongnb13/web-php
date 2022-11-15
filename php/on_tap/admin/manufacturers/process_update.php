@@ -1,4 +1,6 @@
-<?php
+<?php 
+require '../ck_super_admin.php';
+
 if (empty($_POST['id'])){
     header('location:index.php?error=Thiếu mã');
     exit;

@@ -1,3 +1,4 @@
+<?php require '../ck_super_admin.php'?>
 <!DOCTYPE html>
 <html lang="en">
 
