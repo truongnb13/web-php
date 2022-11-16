@@ -1,0 +1,12 @@
+1: Link Web OAM hệ thống vOCS
+link: http://10.70.66.4/
+Acct: hvbcvt/Hvbcvt@123
+2. Link Web OAM hệ thống EPC
+link: https://10.70.66.4:8686
+Acct:ptit_student/Ptit@2020
+3. Link web OAM IMS
+link: https://10.70.66.4:8877/
+Acct: ptit_student/Ptit@123456
+4. Linh cấu hình WebApp OCS
+link: http://10.70.66.13:8080/vocs_lab/login.xhtml
+acct: admin/Ha2911@@
